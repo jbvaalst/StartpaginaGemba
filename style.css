@@ -1,0 +1,186 @@
+html {
+  font: 22px 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+body {
+  display: column;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+}
+
+.background {
+  background-image: url(assets/images/gemba[6824].jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-color: rgb(115, 169, 240);
+  height: 100vh;
+  /*position: relative;*/
+}
+
+h1 {
+  font-size: 1.5em;
+  grid-column: 1 / -1;
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  font-size: 1em;
+  color: white;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #1d81b2;
+}
+
+.list {
+  margin: 10px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 25px;
+  opacity: 0.9;
+  display: grid;
+  grid-gap: 50px 110px;
+  grid-template-columns: repeat(auto-fill, 370px);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+li:first-child {
+  font-weight: bold;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+li:first-child:hover {
+  animation: none;
+}
+
+li:hover {
+  animation: shake 1s infinite;
+  transform: translate3d(0, 0, 0);
+}
+/* Popup container - can be anything you want */
+.popup.popuptext {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add  shake animation for links*/
+@keyframes shake {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+/* On screens that are 800px wide or less, show a different setting for html and background */
+@media screen and (max-width: 1150px) {
+  
+  .list {
+    margin: 10px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 25px;
+    opacity: 0.9;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, 350px);
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  html {
+    font: 18px 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+    background-color: whitesmoke;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+
+
+  .list {
+    margin: 10px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 25px;
+    opacity: 0.9;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 300px);
+  }
+}
+
